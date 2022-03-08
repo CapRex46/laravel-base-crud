@@ -79,6 +79,7 @@ class ComicsConntroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dati = Comics::all();
+        return view("comcis.index",compact("dati"))
     }
 }
