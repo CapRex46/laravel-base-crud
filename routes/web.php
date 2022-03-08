@@ -17,6 +17,5 @@ Route::get('/', function () {
    
 });
 
-Route::get('/comics', function () {
 
-});
+Route::resource("comics","ComicsController");
