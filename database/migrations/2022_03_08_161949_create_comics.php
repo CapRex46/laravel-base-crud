@@ -16,6 +16,7 @@ class CreateComics extends Migration
         Schema::create('comics', function (Blueprint $table) {
             $table-> string("title", 100);
             $table-> string("genre", 100);
+            $table-> decimal("price","8","2");
         });
     }
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Comics;
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -13,7 +14,8 @@ class ComicsConntroller extends Controller
      */
     public function index()
     {
-        //
+        $dati = Comics::all();
+        return view("comcis.index",compact("dati"));
     }
 
     /**
@@ -45,7 +47,8 @@ class ComicsConntroller extends Controller
      */
     public function show($id)
     {
-        //
+        $comic = Comics::find($id);
+        return view("comics.show", compact("comics"));
     }
 
     /**
@@ -79,7 +82,6 @@ class ComicsConntroller extends Controller
      */
     public function destroy($id)
     {
-        $dati = Comics::all();
-        return view("comcis.index",compact("dati"))
+
     }
 }
